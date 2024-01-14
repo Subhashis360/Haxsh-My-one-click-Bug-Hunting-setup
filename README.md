@@ -12,7 +12,7 @@ Haxsh is a powerful and versatile hacking tool designed for penetration testers 
 ## Setup
 
 ```bash
-1. sudo git clone https://github.com/Subhashis360/My-one-click-Bug-Hunting-setup
+1. sudo git clone https://github.com/Subhashis360/Haxsh-My-one-click-Bug-Hunting-setup
 2. cd My-one-click-Bug-Hunting-setup/
 3. chmod +x Haxsh.sh
 4. bash Haxsh.sh or ./Haxsh.sh
