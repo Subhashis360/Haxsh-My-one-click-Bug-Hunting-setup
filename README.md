@@ -1,13 +1,11 @@
 # Haxsh 🚀
 
-
 # My-one-click-Bug-Hunting-setup Overview
 Haxsh is a powerful and versatile hacking tool designed for penetration testers and security enthusiasts. It provides a set of essential tools to streamline the reconnaissance and vulnerability assessment process. This bash script designed to setting up your Linux machine for bug hunting/penetration testing/hacking Machine.
 
 ## Table of Contents
 - [Setup](#setup)
 - [IncludedTools](#IncludedTools)
-- [Usage](#usage)
 - [Contribution](#contribution)
 - [License](#license)
 
@@ -42,24 +40,6 @@ This script Creates your machine a powerful bug_hunting/hacking/penetration_test
 15. [assetfinder](https://github.com/tomnomnom/assetfinder) - Find domains and subdomains
 16. [dnscan](https://github.com/rbsec/dnscan.git) - DNS scanning tool
 17. [SecList](https://github.com/danielmiessler/SecLists.git) - Extensive collection of wordlists for various purposes
-
-## Usage
-
-🚀 Here's how you can use Haxsh to its full potential:
-
-Discover Subdomains:
-  # Use Sublist3r to find subdomains of a target
-  python3 sublist3r.py -d example.com
-Lazy Reconnaissance:
-  # Utilize LazyRecon for automated reconnaissance
-  cd LazyRecon && ./lazyrecon.sh -d example.com
-Vulnerability Scanning:
-  # Scan for SQL injection with sqlmap
-  cd sqlmap-dev && python sqlmap.py -u "http://example.com/page?id=1"
-Custom Wordlist Attack:
-  # Use Gobuster to perform a directory brute-force attack
-  gobuster dir -u http://example.com -w wordlist.txt
-and many more you can get by --help
 
 ## Contribution 
 👥 Haxsh welcomes contributions from the community. If you'd like to contribute, please follow these guidelines:
