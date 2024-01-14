@@ -48,12 +48,20 @@ tools=("github.com/projectdiscovery/pdtm/cmd/pdtm@latest"
        "https://github.com/rbsec/dnscan.git"
        "https://github.com/danielmiessler/SecLists.git")
 
-echo -e "${G}[+] Installing tools in parallel${NC}"
 for tool in "${tools[@]}"; do
+    tool_name=$(basename "$tool" | cut -d'.' -f1)
     if [[ $tool == *github* ]]; then
-        git clone $tool
+        if [ -d "$tool_name" ]; then
+            echo -e "${G}[!] $tool_name is already available. Skipping.${NC}"
+        else
+            git clone $tool || echo -e "${G}[!] Error cloning $tool. Continuing with the next tool.${NC}"
+        fi
     else
-        go install -v $tool
+        if [ -x "$(command -v $tool_name)" ]; then
+            echo -e "${G}[!] $tool_name is already installed. Skipping.${NC}"
+        else
+            go install -v $tool || echo -e "${G}[!] Error installing $tool. Continuing with the next tool.${NC}"
+        fi
     fi
 done
 
